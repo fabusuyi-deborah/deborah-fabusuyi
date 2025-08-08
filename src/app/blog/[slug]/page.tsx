@@ -1,12 +1,4 @@
-// src/app/blog/[slug]/page.tsx
-
-interface BlogPostPageProps {
-  params: {
-    slug: string;
-  };
-}
-
-export default function BlogPostPage({ params }: BlogPostPageProps) {
+export default function BlogPostPage({ params }: { params: { slug: string } }) {
   return (
     <main className="p-4">
       <h1 className="text-2xl font-bold">Blog Post: {params.slug}</h1>
