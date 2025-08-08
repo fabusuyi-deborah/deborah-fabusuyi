@@ -1,4 +1,9 @@
 import Image from 'next/image';
+import { FaHtml5, FaCss3 } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io5";
+import { SiTailwindcss, SiReact, SiNextdotjs, SiTypescript } from "react-icons/si";
+
+
 
 export default function About() {
   return (
@@ -14,12 +19,14 @@ export default function About() {
             Proficient in HTML, CSS, JavaScript, and React, with a strong attention to detail and a passion for crafting clean, efficient, and user-centric web interfaces. Focused on solving complex front-end challenges and continuously improving development practices within collaborative teams.
       </p>
       <p className="font-semibold mt-6">MY TECH STACK</p>
-      <div className="flex justify-center md:justify-start mt-4 space-x-4">
-        <Image src="/images/html.png" alt="Html Logo" width={42} height={42} />
-        <Image src="/images/css.png" alt="Css Logo" width={42} height={42} />
-        <Image src="/images/javascript.png" alt="Javascript Logo" width={42} height={42} />
-        <Image src="/images/reactjs.png" alt="React Logo" width={42} height={42} />
-        <Image src="/images/nextjs.png" alt="Next.js Logo" width={42} height={42} />
+          <div className="flex justify-center md:justify-start mt-4 space-x-4 text-2xl">
+            <FaHtml5 />
+            <FaCss3 />
+            <IoLogoJavascript />
+            <SiReact /> 
+            <SiNextdotjs />
+            <SiTailwindcss />
+            <SiTypescript />
       </div>
     </div>
 

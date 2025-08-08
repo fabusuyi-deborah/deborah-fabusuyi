@@ -8,4 +8,7 @@
 .scrollbar-hide::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
+.scrollbar-hide {
+  -webkit-overflow-scrolling: touch;
+}
 

@@ -3,6 +3,9 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
+import { FaHtml5, FaCss3 } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io5";
+import { SiTailwindcss, SiReact, SiNextdotjs, SiTypescript } from "react-icons/si";
 
 // Letter animation
 const letterAnim = {
@@ -17,7 +20,6 @@ const letterAnim = {
   }),
 };
 
-// Animated line component
 function AnimatedLine({ text, delay = 0 }: { text: string; delay?: number }) {
   return (
     <div className="flex justify-center flex-wrap">
@@ -38,6 +40,34 @@ function AnimatedLine({ text, delay = 0 }: { text: string; delay?: number }) {
   );
 }
 
+// Image animations — now with load delays
+const middleImageVariant = {
+  hidden: { y: 100, opacity: 0 },
+  show: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.8, ease: 'easeOut', delay: 0.3 }, // starts first
+  },
+};
+
+const sideImageLeftVariant = {
+  hidden: { x: 0, opacity: 0 },
+  show: {
+    x: -20, // still overlapping
+    opacity: 1,
+    transition: { duration: 0.8, ease: 'easeOut', delay: 1.2 }, // after middle finishes
+  },
+};
+
+const sideImageRightVariant = {
+  hidden: { x: 0, opacity: 0 },
+  show: {
+    x: 20, // still overlapping
+    opacity: 1,
+    transition: { duration: 0.8, ease: 'easeOut', delay: 1.2 }, // after middle finishes
+  },
+};
+
 export default function Hero() {
   const phrasePairs = [
     ['FRONTEND', 'DEVELOPER'],
@@ -54,19 +84,17 @@ export default function Hero() {
     setShowLine1(true);
     setShowLine2(false);
 
-    // Wait for line1 to finish, then show line2
     const line2Timer = setTimeout(() => {
       setShowLine2(true);
-    }, line1.length * 80); // delay based on character count
+    }, line1.length * 80);
 
-    // Change phrase pair after total time
     const cycleTimer = setTimeout(() => {
       setShowLine1(false);
       setShowLine2(false);
       setTimeout(() => {
         setIndex((prev) => (prev + 1) % phrasePairs.length);
-      }, 300); // small pause before next pair
-    }, 3000); // total time before next pair
+      }, 300);
+    }, 3000);
 
     return () => {
       clearTimeout(line2Timer);
@@ -83,26 +111,45 @@ export default function Hero() {
           {showLine2 && <AnimatedLine text={line2} delay={500} />}
         </h1>
 
-        {/* images */}
-        <div className="flex justify-center items-end gap-0 mt-10">
-          <div className="-mr-10 z-10">
+        {/* Images with load animation */}
+        <div className="flex justify-center items-end gap-0 mt-10 scale-95 ">
+          <motion.div
+            className="-mr-15 z-10"
+            variants={sideImageLeftVariant}
+            initial="hidden"
+            animate="show"
+          >
             <Image src="/images/hero-img1.png" alt="Hero Image 1" width={279} height={383} priority />
-          </div>
-          <div className="z-20">
+          </motion.div>
+
+          <motion.div
+            className="z-20"
+            variants={middleImageVariant}
+            initial="hidden"
+            animate="show"
+          >
             <Image src="/images/hero-img2.png" alt="Hero Image 2" width={249} height={250} priority />
-          </div>
-          <div className="-ml-10 z-10">
+          </motion.div>
+
+          <motion.div
+            className="-ml-15 z-10"
+            variants={sideImageRightVariant}
+            initial="hidden"
+            animate="show"
+          >
             <Image src="/images/hero-img3.png" alt="Hero Image 3" width={279} height={383} priority />
-          </div>
+          </motion.div>
         </div>
 
         {/* Tech stack */}
-        <div className="flex justify-center mt-10 space-x-8">
-          <Image src="/images/html.png" alt="Html Logo" width={42} height={42} />
-          <Image src="/images/css.png" alt="Css Logo" width={42} height={42} />
-          <Image src="/images/javascript.png" alt="Javascript Logo" width={42} height={42} />
-          <Image src="/images/reactjs.png" alt="React Logo" width={42} height={42} />
-          <Image src="/images/nextjs.png" alt="Next.js Logo" width={42} height={42} />
+        <div className="flex justify-center mt-10 space-x-4 text-3xl">
+          <FaHtml5 />
+          <FaCss3 />
+          <IoLogoJavascript />
+          <SiReact />
+          <SiNextdotjs />
+          <SiTailwindcss />
+          <SiTypescript />
         </div>
 
         {/* about me */}

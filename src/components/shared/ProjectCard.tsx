@@ -1,6 +1,6 @@
 // src/components/shared/ProjectCard.tsx
 import Image from "next/image";
-import { Github, ExternalLink } from "lucide-react";
+import { Github, Eye } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
@@ -36,7 +36,7 @@ export default function ProjectCard({
             target="_blank"
             className="flex items-center gap-1 border border-white px-3 py-1 rounded-full"
           >
-            <Github size={16} /> Code
+            <Github size={20} /> Code
           </Link>
 
           <Link
@@ -44,14 +44,14 @@ export default function ProjectCard({
             target="_blank"
             className="flex items-center gap-1 border border-white px-3 py-1 rounded-full"
           >
-            <ExternalLink size={16} /> Live
+            <Eye size={20} /> Live
           </Link>
         </div>
 
-        <p className="text-sm text-gray-300">{project.description}</p>
+        <p className=" text-white">{project.description}</p>
 
-        <p className="text-sm text-gray-400">
-          <strong>Skills:</strong> {project.stack.join(", ")}
+        <p className="text-white ">
+          Skills: {project.stack.join(", ")}
         </p>
       </div>
 
