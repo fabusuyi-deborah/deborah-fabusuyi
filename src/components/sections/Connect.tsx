@@ -12,7 +12,7 @@ export default function Connect() {
          <div>
           <button className="px-3 py-2 rounded-full border border-black text-3xl ">
             <span className="mr-1 bg-[#0DC420] rounded-full h-3 w-3 inline-block"></span>
-            deborahfabusuyi03@gmail.com
+            fabusuyideborah03@gmail.com
             <span className="ml-1 bg-[#0DC420] rounded-full h-3 w-3 inline-block"></span>
 
           </button>
