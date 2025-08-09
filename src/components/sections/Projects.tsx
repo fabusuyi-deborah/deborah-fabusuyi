@@ -1,4 +1,3 @@
-// src/components/sections/ProjectsSection.tsx
 "use client";
 
 import { useRef } from "react";
@@ -28,8 +27,12 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
   });
 
   return (
-    <section className="bg-black text-white py-30 mt-20" ref={containerRef}>
-      <h1 className="text-5xl font-bold py-10 text-center">
+    <section
+      className="bg-black text-white mt-20"
+      id="projects"
+      ref={containerRef}
+    >
+      <h1 className="text-5xl font-bold py-16 text-center">
         <span className="block">RECENT</span>
         <span className="block">PROJECTS</span>
       </h1>
@@ -62,12 +65,10 @@ function ProjectMotionCard({
   total,
   scrollYProgress,
 }: ProjectMotionCardProps) {
-  // Each card's animation window
   const start = index * (1 / total);
   const end = start + 1 / total;
 
-  // Move card slightly up only when it's "active"
-  const y = useTransform(scrollYProgress, [start, end], [0, -50]);
+  const y = useTransform(scrollYProgress, [start, end], [0, -30]);
 
   return (
     <motion.div
@@ -75,7 +76,7 @@ function ProjectMotionCard({
         y,
         position: "sticky",
         top: "10vh",
-        zIndex: index + 1, // later cards on top
+        zIndex: index + 1,
       }}
       className="mb-12"
     >

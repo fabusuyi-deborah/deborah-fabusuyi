@@ -1,4 +1,3 @@
-// src/components/shared/ProjectCard.tsx
 import Image from "next/image";
 import { Github, Eye } from "lucide-react";
 import Link from "next/link";
@@ -24,7 +23,7 @@ export default function ProjectCard({
   return (
     <motion.div
       style={style}
-      className={`w-full rounded-3xl md:p-24 px-8 py-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-8 ${project.bgColor}`}
+      className={`w-full rounded-3xl md:p-24 px-8 py-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-8 ${project.bgColor ?? ""}`}
     >
       {/* Text Section */}
       <div className="text-white w-full lg:w-2/5 space-y-4 mt-4 sm:mt-12">
@@ -34,6 +33,7 @@ export default function ProjectCard({
           <Link
             href={project.githubLink}
             target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-1 border border-white px-3 py-1 rounded-full"
           >
             <Github size={20} /> Code
@@ -42,15 +42,16 @@ export default function ProjectCard({
           <Link
             href={project.liveLink}
             target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-1 border border-white px-3 py-1 rounded-full"
           >
             <Eye size={20} /> Live
           </Link>
         </div>
 
-        <p className=" text-white">{project.description}</p>
+        <p className="text-white">{project.description}</p>
 
-        <p className="text-white ">
+        <p className="text-white">
           Skills: {project.stack.join(", ")}
         </p>
       </div>

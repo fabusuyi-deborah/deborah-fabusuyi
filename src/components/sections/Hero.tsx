@@ -5,22 +5,9 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { FaHtml5, FaCss3 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
-import {
-  SiTailwindcss,
-  SiReact,
-  SiNextdotjs,
-  SiTypescript,
-} from "react-icons/si";
+import { SiTailwindcss, SiReact, SiNextdotjs, SiTypescript } from "react-icons/si";
 
-// Letter animation
-
-function AnimatedLine({
-  text,
-  delay = 0,
-}: {
-  text: string;
-  delay?: number;
-}) {
+function AnimatedLine({ text, delay = 0 }: { text: string; delay?: number }) {
   return (
     <div className="flex justify-center flex-wrap">
       {text.split("").map((char, i) => (
@@ -41,8 +28,6 @@ function AnimatedLine({
           initial="hidden"
           animate="visible"
           className="inline-block"
-          style={{
-          }}
         >
           {char === " " ? "\u00A0" : char}
         </motion.span>
@@ -51,7 +36,6 @@ function AnimatedLine({
   );
 }
 
-// Image animations
 const middleImageVariant: Variants = {
   hidden: { y: 100, opacity: 0 },
   show: {
@@ -95,16 +79,12 @@ export default function Hero() {
     setShowLine1(true);
     setShowLine2(false);
 
-    const line2Timer = setTimeout(() => {
-      setShowLine2(true);
-    }, line1.length * 80);
+    const line2Timer = setTimeout(() => setShowLine2(true), line1.length * 80);
 
     const cycleTimer = setTimeout(() => {
       setShowLine1(false);
       setShowLine2(false);
-      setTimeout(() => {
-        setIndex((prev) => (prev + 1) % phrasePairs.length);
-      }, 300);
+      setTimeout(() => setIndex((prev) => (prev + 1) % phrasePairs.length), 300);
     }, 3000);
 
     return () => {
@@ -116,7 +96,6 @@ export default function Hero() {
   return (
     <section className="flex items-center justify-center text-center mt-10 mx-auto px-4">
       <div>
-        {/* Animated headline with buttery AnimatePresence */}
         <h1 className="text-5xl md:text-6xl font-semibold leading-tight h-[150px] space-y-2">
           <AnimatePresence mode="wait">
             {showLine1 && (
@@ -197,23 +176,19 @@ export default function Hero() {
 
         {/* Tech stack */}
         <div className="flex justify-center mt-10 space-x-4 text-3xl">
-          <FaHtml5 />
-          <FaCss3 />
-          <IoLogoJavascript />
-          <SiReact />
-          <SiNextdotjs />
-          <SiTailwindcss />
-          <SiTypescript />
+          <FaHtml5 size={24} />
+          <FaCss3 size={24} />
+          <IoLogoJavascript size={24} />
+          <SiReact size={24} />
+          <SiNextdotjs size={24} />
+          <SiTailwindcss size={24} />
+          <SiTypescript size={24} />
         </div>
 
         {/* About me */}
         <div className="mt-10 text-md">
           <p className="mx-auto max-w-2xl">
-            Proficient in HTML, CSS, JavaScript, and React, with a strong
-            attention to detail and a passion for crafting clean, efficient, and
-            user-centric web interfaces. Focused on solving complex front-end
-            challenges and continuously improving development practices within
-            collaborative teams.
+          Hi, I&apos;m Deborah - a frontend developer focused on creating clean, responsive websites that are easy to use. I enjoy tackling challenges, improving my skills, and building apps that make a real difference for users.
           </p>
         </div>
 
