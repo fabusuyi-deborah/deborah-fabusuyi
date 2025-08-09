@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { FaHtml5, FaCss3 } from "react-icons/fa";
@@ -13,30 +13,36 @@ import {
 } from "react-icons/si";
 
 // Letter animation
-const letterAnim: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: (i: number) => ({
-    opacity: 1,
-    y: 0,
-    transition: {
-      delay: i * 0.05,
-      duration: 0.4,
-    },
-  }),
-};
 
-function AnimatedLine({ text, delay = 0 }: { text: string; delay?: number }) {
+function AnimatedLine({
+  text,
+  delay = 0,
+}: {
+  text: string;
+  delay?: number;
+}) {
   return (
     <div className="flex justify-center flex-wrap">
       {text.split("").map((char, i) => (
         <motion.span
           key={`${text}-${i}`}
           custom={i}
-          variants={letterAnim}
+          variants={{
+            hidden: { opacity: 0, y: 20 },
+            visible: (j: number) => ({
+              opacity: 1,
+              y: 0,
+              transition: {
+                delay: delay / 1000 + j * 0.05,
+                duration: 0.4,
+              },
+            }),
+          }}
           initial="hidden"
           animate="visible"
           className="inline-block"
-          style={{ transitionDelay: `${delay / 1000}s` }}
+          style={{
+          }}
         >
           {char === " " ? "\u00A0" : char}
         </motion.span>
@@ -110,10 +116,35 @@ export default function Hero() {
   return (
     <section className="flex items-center justify-center text-center mt-10 mx-auto px-4">
       <div>
-        {/* Animated headline */}
+        {/* Animated headline with buttery AnimatePresence */}
         <h1 className="text-5xl md:text-6xl font-semibold leading-tight h-[150px] space-y-2">
-          {showLine1 && <AnimatedLine text={line1} />}
-          {showLine2 && <AnimatedLine text={line2} delay={500} />}
+          <AnimatePresence mode="wait">
+            {showLine1 && (
+              <motion.div
+                key={`line1-${line1}`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+              >
+                <AnimatedLine text={line1} />
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          <AnimatePresence mode="wait">
+            {showLine2 && (
+              <motion.div
+                key={`line2-${line2}`}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
+              >
+                <AnimatedLine text={line2} delay={500} />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </h1>
 
         {/* Images with load animation */}
