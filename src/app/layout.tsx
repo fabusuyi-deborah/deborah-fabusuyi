@@ -11,7 +11,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body className={inter.className}  >
         <Navbar />
-        <main className='container mx-auto'>{children}</main>
+        <main className=''>{children}</main>
         <Footer />
       </body>
     </html>

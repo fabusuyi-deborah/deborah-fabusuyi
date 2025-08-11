@@ -5,8 +5,8 @@ import { SiTailwindcss, SiReact, SiNextdotjs, SiTypescript } from 'react-icons/s
 
 export default function About() {
   return (
-    <section className="py-20 px-4 bg-black text-white" id="about">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch justify-between gap-10">
+    <section className="py-20 px-4 bg-black text-white max-w-full" id="about">
+      <div className="mx-auto flex flex-col md:flex-row items-stretch justify-between gap-10">
         {/* TEXT */}
         <div className="flex-1 text-center md:text-left flex flex-col justify-center">
           <h2 className="text-4xl font-bold mb-6">ABOUT</h2>

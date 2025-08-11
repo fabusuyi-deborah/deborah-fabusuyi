@@ -28,7 +28,7 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
 
   return (
     <section
-      className="bg-black text-white mt-20"
+      className="bg-black text-white mt-20 w-full"
       id="projects"
       ref={containerRef}
     >

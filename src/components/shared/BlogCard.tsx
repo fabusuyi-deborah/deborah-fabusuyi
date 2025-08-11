@@ -12,7 +12,7 @@ export default function BlogCard({ article }: { article: Article }) {
   return (
     <div className="blog-card">
       {/* Image and Title */}
-      <div className="relative w-full aspect-[16/9] overflow-hidden">
+      <div className="relative max-w-full  aspect-[16/9] overflow-hidden">
         <Image src={article.image} alt={article.title} fill className="object-cover" />
       </div>
 

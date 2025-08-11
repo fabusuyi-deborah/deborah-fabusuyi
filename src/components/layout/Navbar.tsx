@@ -6,52 +6,57 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="w-full px-6 py-4 font-bold text-xl bg-white z-10 sticky">
+    <nav className="w-full px-4 sm:px-6 py-4 font-bold text-xl bg-white z-10 sticky top-0">
       <div className="flex items-center justify-between max-w-7xl mx-auto">
         {/* Logo */}
-        <div>
-          <Link href="/" className="">
+        <div className="flex-shrink-0">
+          <Link href="/" className="hover:text-gray-600 transition-colors">
             DEBORAH FABUSUYI
           </Link>
         </div>
 
-        {/* Nav Links (hidden on small screens) */}
-        <div className="hidden md:block">
+        {/* Nav Links (hidden on mobile and small tablets) */}
+        <div className="hidden lg:block">
           <ul className="flex space-x-6">
             <li>
-              <Link href="/projects" className="">
+              <Link href="/projects" className="hover:text-gray-600 transition-colors">
                 PROJECTS
               </Link>
             </li>
             <li>
-              <Link href="/articles" className="">
+              <Link href="/articles" className="hover:text-gray-600 transition-colors">
                 ARTICLES
               </Link>
             </li>
             <li>
-              <Link href="/about" className="">
+              <Link href="/about" className="hover:text-gray-600 transition-colors">
                 ABOUT
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="">
+              <Link href="/contact" className="hover:text-gray-600 transition-colors">
                 CONTACT
               </Link>
             </li>
           </ul>
         </div>
 
-        {/* Button (always visible) */}
-        <div className="hidden md:block">
-          <button className="px-3 py-2 rounded-full border border-black">
+        {/* Button (hidden on mobile, visible on tablet+) */}
+        <div className="hidden sm:block flex-shrink-0">
+          <button className="px-3 py-2 rounded-full border border-black hover:bg-gray-50 transition-colors">
             <span className="mr-1 bg-[#0DC420] rounded-full h-3 w-3 inline-block"></span>
-            OPEN TO WORK
+            <span className="hidden md:inline">OPEN TO WORK</span>
+            <span className="md:hidden">OPEN</span>
           </button>
         </div>
 
         {/* Mobile menu icon (hamburger) */}
-        <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)}>
+        <div className="lg:hidden">
+          <button 
+            onClick={() => setIsOpen(!isOpen)}
+            className="p-2 hover:bg-gray-100 rounded-md transition-colors"
+            aria-label="Toggle menu"
+          >
             <svg
               className="w-6 h-6"
               fill="none"
@@ -75,49 +80,55 @@ export default function Navbar() {
 
       {/* Mobile Menu Content */}
       {isOpen && (
-        <div className="md:hidden mt-4 space-y-4 text-center">
-          <ul className="space-y-2">
-            <li>
-              <Link
-                href="/#about"
-                className="block hover:text-gray-600"
-                onClick={() => setIsOpen(false)}
-              >
-                PROJECTS
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/#work"
-                className="block hover:text-gray-600"
-                onClick={() => setIsOpen(false)}
-              >
-                ARTICLES
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/#articles"
-                className="block hover:text-gray-600"
-                onClick={() => setIsOpen(false)}
-              >
-                ABOUT
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/#contact"
-                className="block hover:text-gray-600"
-                onClick={() => setIsOpen(false)}
-              >
-                CONTACT
-              </Link>
-            </li>
-          </ul>
-          <button className="mt-2 px-4 py-2 rounded-full border border-black">
-            <span className="mr-1 bg-[#0DC420] rounded-full h-3 w-3 inline-block"></span>
-            OPEN TO WORK
-          </button>
+        <div className="lg:hidden mt-4 pb-4 border-t border-gray-200">
+          <div className="pt-4 space-y-4 text-center">
+            <ul className="space-y-3">
+              <li>
+                <Link
+                  href="/projects"
+                  className="block hover:text-gray-600 transition-colors py-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  PROJECTS
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/articles"
+                  className="block hover:text-gray-600 transition-colors py-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  ARTICLES
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="block hover:text-gray-600 transition-colors py-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  ABOUT
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact"
+                  className="block hover:text-gray-600 transition-colors py-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  CONTACT
+                </Link>
+              </li>
+            </ul>
+            
+            {/* Mobile button */}
+            <div className="sm:hidden pt-2">
+              <button className="px-4 py-2 rounded-full border border-black hover:bg-gray-50 transition-colors">
+                <span className="mr-1 bg-[#0DC420] rounded-full h-3 w-3 inline-block"></span>
+                OPEN TO WORK
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </nav>

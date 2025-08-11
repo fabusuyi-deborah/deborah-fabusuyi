@@ -3,9 +3,8 @@
 import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { FaHtml5, FaCss3 } from "react-icons/fa";
-import { IoLogoJavascript } from "react-icons/io5";
-import { SiTailwindcss, SiReact, SiNextdotjs, SiTypescript } from "react-icons/si";
+import TechStack from "../shared/TechStack";
+
 
 function AnimatedLine({ text, delay = 0 }: { text: string; delay?: number }) {
   return (
@@ -129,7 +128,7 @@ export default function Hero() {
         {/* Images with load animation */}
         <div className="flex justify-center items-end gap-0 mt-10 scale-95">
           <motion.div
-            className="-mr-10 z-10"
+            className="-mr-12 z-10"
             variants={sideImageLeftVariant}
             initial="hidden"
             animate="show"
@@ -159,7 +158,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.div
-            className="-ml-10 z-10"
+            className="-ml-12 z-10"
             variants={sideImageRightVariant}
             initial="hidden"
             animate="show"
@@ -176,13 +175,7 @@ export default function Hero() {
 
         {/* Tech stack */}
         <div className="flex justify-center mt-10 space-x-4 text-3xl">
-          <FaHtml5 size={24} />
-          <FaCss3 size={24} />
-          <IoLogoJavascript size={24} />
-          <SiReact size={24} />
-          <SiNextdotjs size={24} />
-          <SiTailwindcss size={24} />
-          <SiTypescript size={24} />
+          <TechStack />
         </div>
 
         {/* About me */}
