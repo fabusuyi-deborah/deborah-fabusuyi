@@ -63,7 +63,7 @@ export default function ProjectCard({
           alt={project.title}
           width={800}
           height={800}
-          className="transform lg:-rotate-7"
+          className=""
         />
       </div>
     </motion.div>

@@ -1,14 +1,13 @@
 import Image from 'next/image';
-import { FaHtml5, FaCss3 } from 'react-icons/fa';
-import { IoLogoJavascript } from 'react-icons/io5';
-import { SiTailwindcss, SiReact, SiNextdotjs, SiTypescript } from 'react-icons/si';
+import TechStack from '../shared/TechStack';
 
 export default function About() {
   return (
     <section className="py-20 px-4 bg-black text-white max-w-full" id="about">
-      <div className="mx-auto flex flex-col md:flex-row items-stretch justify-between gap-10">
+      <div className="mx-auto flex flex-col lg:flex-row lg:items-stretch gap-8">
+        
         {/* TEXT */}
-        <div className="flex-1 text-center md:text-left flex flex-col justify-center">
+        <div className="flex-1 text-center lg:text-left flex flex-col justify-center">
           <h2 className="text-4xl font-bold mb-6">ABOUT</h2>
           <p className="mb-4">
             I am Deborah, a Frontend developer and Technical writer who loves building clean, responsive websites and applications, while also documenting how they work.
@@ -25,25 +24,20 @@ export default function About() {
           </p>
 
           <p className="font-semibold mt-6">MY TECH STACK</p>
-          <div className="flex justify-center md:justify-start mt-4 space-x-4 text-2xl">
-            <FaHtml5 />
-            <FaCss3 />
-            <IoLogoJavascript />
-            <SiReact />
-            <SiNextdotjs />
-            <SiTailwindcss />
-            <SiTypescript />
+          <div className="flex justify-center lg:justify-start mt-4 space-x-4 text-2xl">
+            <TechStack className="text-white" />
           </div>
         </div>
 
         {/* IMAGE */}
-        <div className="flex-1 flex justify-center">
-          <div className="w-full h-full relative aspect-square">
+        <div className="w-full lg:flex-1">
+          <div className="relative w-full h-64 sm:h-80 lg:h-full">
             <Image
               src="/images/debby.png"
               alt="Debby"
               fill
-              className="object-contain"
+              className="object-cover"
+              priority
             />
           </div>
         </div>

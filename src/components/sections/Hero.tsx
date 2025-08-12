@@ -93,7 +93,7 @@ export default function Hero() {
   }, [index, line1.length, phrasePairs.length]);
 
   return (
-    <section className="flex items-center justify-center text-center mt-10 mx-auto px-4">
+    <section className="flex items-center justify-center text-center mt-6 mx-auto px-4">
       <div>
         <h1 className="text-5xl md:text-6xl font-semibold leading-tight h-[150px] space-y-2">
           <AnimatePresence mode="wait">
@@ -126,7 +126,7 @@ export default function Hero() {
         </h1>
 
         {/* Images with load animation */}
-        <div className="flex justify-center items-end gap-0 mt-10 scale-95">
+        <div className="flex justify-center items-end gap-0 mt-4 scale-95">
           <motion.div
             className="-mr-12 z-10"
             variants={sideImageLeftVariant}
@@ -190,9 +190,9 @@ export default function Hero() {
           <button className="bg-[#9747FF] text-white px-8 py-3 rounded-full w-full md:w-48">
             Resume
           </button>
-          <button className="border border-[#9747FF] text-[#9747FF] px-8 py-3 rounded-full w-full md:w-48">
+          <a href= "#connect" className="border border-[#9747FF] text-[#9747FF] px-8 py-3 rounded-full w-full md:w-48">
             Contact me
-          </button>
+          </a>
         </div>
       </div>
     </section>

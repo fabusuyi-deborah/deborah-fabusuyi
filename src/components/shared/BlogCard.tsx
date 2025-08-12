@@ -6,6 +6,7 @@ type Article = {
   image: string;
   excerpt: string;
   slug: string;
+  link: string;
 };
 
 export default function BlogCard({ article }: { article: Article }) {
@@ -21,9 +22,14 @@ export default function BlogCard({ article }: { article: Article }) {
       <p className="text-lg pt-3">{article.excerpt}</p>
 
       <div className="mt-4 flex items-center justify-between">
-        <div className="bg-[#9747FF] text-white rounded-full p-2">
+        <a
+          href={article.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-[#9747FF] text-white rounded-full p-2 inline-flex items-center justify-center " 
+        >
           <ArrowUpRight className="w-5 h-5" />
-        </div>
+        </a>
       </div>
     </div>
   );

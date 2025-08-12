@@ -28,16 +28,16 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
 
   return (
     <section
-      className="bg-black text-white mt-20 w-full"
+      className="bg-black text-white mt-20 max-w-full"
       id="projects"
       ref={containerRef}
     >
-      <h1 className="text-5xl font-bold py-16 text-center">
+      <h1 className="md:text-5xl font-bold py-16 text-center text-2xl">
         <span className="block">RECENT</span>
         <span className="block">PROJECTS</span>
       </h1>
 
-      <div className="relative h-[400vh]">
+      <div className="relative">
         {projects.map((project, index) => (
           <ProjectMotionCard
             key={project.slug}
@@ -68,7 +68,7 @@ function ProjectMotionCard({
   const start = index * (1 / total);
   const end = start + 1 / total;
 
-  const y = useTransform(scrollYProgress, [start, end], [0, -30]);
+  const y = useTransform(scrollYProgress, [start, end], [0, 0]);
 
   return (
     <motion.div
@@ -78,7 +78,7 @@ function ProjectMotionCard({
         top: "10vh",
         zIndex: index + 1,
       }}
-      className="mb-12"
+      className=""
     >
       <ProjectCard project={project} />
     </motion.div>

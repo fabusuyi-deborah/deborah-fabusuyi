@@ -4,19 +4,51 @@ export default function Connect() {
       <div>
         {/* Social links */}
         <div className="flex flex-wrap gap-4 mb-16 justify-center text-sm sm:text-base md:text-lg">
-          <p>LINKEDIN</p>
-          <p>TWITTER</p>
-          <p>HASHNODE</p>
-          <p>GITHUB</p>
-        </div>
+  <a 
+    href="https://www.linkedin.com/in/deborah-fabusuyi-b76968236/" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="hover:underline"
+  >
+    LINKEDIN
+  </a>
+  
+  <a 
+    href="https://x.com/Debbyiecodes" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="hover:underline"
+  >
+    TWITTER
+  </a>
+  
+  <a 
+    href="https://hashnode.com/@Dherrbie" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="hover:underline"
+  >
+    HASHNODE
+  </a>
+  
+  <a 
+    href="https://github.com/fabusuyi-deborah" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="hover:underline"
+  >
+    GITHUB
+  </a>
+</div>
+
 
         {/* Email button */}
         <div>
-          <button className="px-3 py-2 rounded-full border border-black text-md sm:text-lg md:text-2xl lg:text-3xl break-all">
-            <span className="mr-1 bg-[#0DC420] rounded-full h-3 w-3 inline-block" />
+          <a href="mailto:fabusuyideborah03@gmail.com" className="px-3 py-2 rounded-full border border-black text-md sm:text-lg md:text-2xl lg:text-3xl break-all">
+            <span className="mr-1 bg-[#0DC420] rounded-full h-3 w-3 inline-block align-middle" />
             fabusuyideborah03@gmail.com
-            <span className="ml-1 bg-[#0DC420] rounded-full h-3 w-3 inline-block" />
-          </button>
+            <span className="ml-1 bg-[#0DC420] rounded-full h-3 w-3 inline-block align-middle" />
+          </a>
         </div>
 
         {/* Heading */}

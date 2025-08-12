@@ -5,6 +5,7 @@ type Article = {
   title: string;
   image: string;
   excerpt: string;
+  link: string; 
 };
 
 type ArticlesSectionProps = {
@@ -13,8 +14,8 @@ type ArticlesSectionProps = {
 
 export default function ArticlesSection({ articles }: ArticlesSectionProps) {
   return (
-    <section className="py-20 mt-20 overflow-x-auto" id="articles">
-      <h1 className="text-5xl font-bold py-10 text-center">
+    <section className="py-20 mt-20 overflow-x-auto max-w-full" id="articles">
+      <h1 className="text-2xl md:text-5xl font-bold py-10 text-center ">
         <span className="block">PUBLICATIONS</span>
         <span className="block">& ARTICLES</span>
       </h1>
