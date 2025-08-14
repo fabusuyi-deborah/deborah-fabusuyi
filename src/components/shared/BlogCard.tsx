@@ -13,15 +13,15 @@ export default function BlogCard({ article }: { article: Article }) {
   return (
     <div className="blog-card">
       {/* Image and Title */}
-      <div className="relative max-w-full  aspect-[16/9] overflow-hidden">
+      <div className="relative max-w-full  aspect-[8/4] overflow-hidden">
         <Image src={article.image} alt={article.title} fill className="object-cover" />
       </div>
 
-      <h2 className="text-2xl font-bold pt-3">{article.title}</h2>
+      <h2 className="text-xl font-bold pt-2">{article.title}</h2>
 
-      <p className="text-lg pt-3">{article.excerpt}</p>
+      <p className=" pt-1">{article.excerpt}</p>
 
-      <div className="mt-4 flex items-center justify-between">
+      <div className="mt-2 flex items-center justify-between">
         <a
           href={article.link}
           target="_blank"

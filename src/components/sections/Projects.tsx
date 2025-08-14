@@ -32,7 +32,7 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
       id="projects"
       ref={containerRef}
     >
-      <h1 className="md:text-5xl font-bold py-16 text-center text-2xl">
+      <h1 className="text-sm md:text-5xl font-bold py-16 text-center">
         <span className="block">RECENT</span>
         <span className="block">PROJECTS</span>
       </h1>

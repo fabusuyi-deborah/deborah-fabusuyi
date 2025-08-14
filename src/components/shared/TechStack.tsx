@@ -8,20 +8,26 @@ import { SiReact, SiNextdotjs, SiTailwindcss, SiTypescript } from 'react-icons/s
 interface TechStackProps {
   className?: string;
   speed?: string;
+  fadeColor?: string;
 }
 
 const TechStack: React.FC<TechStackProps> = ({ 
   className = "", 
-  speed = "20s"
+  speed = "20s",
+  fadeColor = "white"
 }) => {
   return (
     <>
       <div className={`relative w-full max-w-xs sm:max-w-sm md:max-w-lg overflow-hidden ${className}`}>
         {/* Fade overlay on left */}
-        <div className="absolute left-0 top-0 bottom-0 w-6 sm:w-8 md:w-12 bg-gradient-to-r from-white to-transparent z-10"></div>
+        <div className="absolute left-0 top-0 bottom-0 w-6 sm:w-8 md:w-12 bg-gradient-to-r from-white to-transparent z-10"
+        style={{background: `linear-gradient(to right, ${fadeColor}, transparent)`}}
+        ></div>
         
         {/* Fade overlay on right */}
-        <div className="absolute right-0 top-0 bottom-0 w-6 sm:w-8 md:w-12 bg-gradient-to-l from-white to-transparent z-10"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-6 sm:w-8 md:w-12 bg-gradient-to-l from-white to-transparent z-10"
+        style={{background: `linear-gradient(to left, ${fadeColor}, transparent)`}}
+        ></div>
         
         {/* Scrolling container */}
         <div 
