@@ -19,7 +19,7 @@ export default function BlogCard({ article }: { article: Article }) {
 
       <h2 className="text-xl font-bold pt-2">{article.title}</h2>
 
-      <p className=" pt-1">{article.excerpt}</p>
+      <p className=" pt-1 text-md md:text-lg">{article.excerpt}</p>
 
       <div className="mt-2 flex items-center justify-between">
         <a

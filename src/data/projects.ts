@@ -2,46 +2,46 @@
 
 export const allProjects = [
   {
-    slug: 'portfolio-site',
-    title: 'Portfolio Website',
-    description: 'A personal portfolio to showcase my skills and projects. Built with Next.js and Tailwind CSS.',
-    image: '/images/testWebsite.png',
-    stack: ['React', 'Tailwind', 'Next.js'],
-    liveLink: 'https://your-portfolio.com',
-    githubLink: 'https://github.com/yourname/portfolio-site',
+    slug: 'todo-app',
+    title: 'Todo app',
+    description: 'A personal todo app built with React and Tailwind CSS. It also integrates API calls for task management.',
+    image: '/images/todo.png',
+    stack: ['React', 'Tailwindcss'],
+    liveLink: 'https://todo-app-exam-six.vercel.app/',
+    githubLink: 'https://github.com/your-username/todo-app',
     bgColor: "bg-[#191919]"
   },
 
   {
-    slug: 'todo-app',
-    title: 'Todo App',
-    description: 'A simple and clean todo app built with Zustand and TypeScript.',
-    image: '/images/testWebsite.png',
-    stack: ['React', 'Zustand', 'TypeScript'],
-    liveLink: 'https://your-todo.com',
-    githubLink: 'https://github.com/yourname/todo-app',
+    slug: 'portfolio',
+    title: 'Portfolio Website',
+    description: 'My personal portfolio website built with Next.js and Tailwind CSS.',
+    image: '/images/portfolio.png',
+    stack: ['Next.js', 'Tailwindcss', 'TypeScript', 'Framer-motion'],
+    liveLink: 'https://my-new-portfolio-five-plum.vercel.app/',
+    githubLink: "https://github.com/fabusuyi-deborah/my-new-portfolio",
     bgColor : "bg-[#013600]"
   },
 
   {
-    slug: 'e-commerce',
-    title: 'E-commerce Website',
-    description: 'A fully functional e-commerce website with product listings and a shopping cart.',
+    slug: 'Dee-events',
+    title: 'Dee Events',
+    description: 'A simple online event management platform.',
     image: '/images/testWebsite.png',
-    stack: ['React', 'Redux', 'Node.js'],
-    liveLink: 'https://your-ecommerce.com',
+    stack: ['React', 'Tailwindcss'],
+    liveLink: '',
     githubLink: 'https://github.com/yourname/e-commerce',
     bgColor: "bg-[#02084E]"
   },
 
   {
-    slug: 'blog-platform',
-    title: 'Blog Platform',
-    description: 'A blogging platform where users can create and share articles.',
-    image: '/images/testWebsite.png',
-    stack: ['Next.js', 'Prisma', 'PostgreSQL'],
-    liveLink: 'https://your-blog.com',
-    githubLink: 'https://github.com/yourname/blog-platform',
+    slug: 'put-a-sign',
+    title: 'Put A Sign',
+    description: 'An ongoing project for an online platform for users to sign documents.',
+    image: '/images/put-a-sign.png',
+    stack: ['React', 'Tailwindcss'],
+    liveLink: 'https://put-a-sign.vercel.app/',
+    githubLink: 'https://github.com/fabusuyi-deborah/put-a-sign',
     bgColor: "bg-[#390000]"
   }
 ];
