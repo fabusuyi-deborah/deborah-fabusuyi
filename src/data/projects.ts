@@ -35,13 +35,13 @@ export const allProjects = [
   },
 
   {
-    slug: 'put-a-sign',
-    title: 'Put A Sign',
-    description: 'An ongoing project for an online platform for users to sign documents.',
-    image: '/images/put-a-sign.png',
-    stack: ['React', 'Tailwindcss'],
-    liveLink: 'https://put-a-sign.vercel.app/',
-    githubLink: 'https://github.com/fabusuyi-deborah/put-a-sign',
+    slug: 'sneakers-product-page',
+    title: 'Sneakers Product page',
+    description: "This is a solution to the E-commerce product page challenge on Frontend Mentor. ",
+    image: '/images/sneakers.png',
+    stack: ['React', 'Typescript', 'Tailwindcss'],
+    liveLink: 'https://e-commerce-app-three-teal.vercel.app/',
+    githubLink: 'https://github.com/fabusuyi-deborah/e-commerce-app',
     bgColor: "bg-[#390000]"
   }
 ];
