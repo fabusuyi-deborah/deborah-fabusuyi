@@ -14,10 +14,9 @@ type ArticlesSectionProps = {
 
 export default function ArticlesSection({ articles }: ArticlesSectionProps) {
   return (
-    <section className="py-10 md:py-16 mt-20 overflow-x-auto max-w-full" id="articles">
+    <section className="py-10 md:py-16 mt-20  max-w-7xl" id="articles">
       <h1 className="text-lg md:text-5xl font-bold py-10 text-center ">
-        <span className="block">PUBLICATIONS</span>
-        <span className="block">& ARTICLES</span>
+        <span className="block">PUBLICATIONS & ARTICLES</span>
       </h1>
 
       <p className="text-center text-md md:text-lg max-w-2xl mx-auto mb-10">
@@ -27,7 +26,7 @@ export default function ArticlesSection({ articles }: ArticlesSectionProps) {
       <div className="overflow-x-auto scrollbar-hide">
         <div className="flex flex-row gap-3 md:gap-6 lg:gap-6 w-max px-8 ">
           {articles.map((article) => (
-            <div key={article.slug} className="min-w-[300px] max-w-sm">
+            <div key={article.slug} className="min-w-[300px] max-w-sm" >
               <ArticleCard article={article} />
             </div>
           ))}

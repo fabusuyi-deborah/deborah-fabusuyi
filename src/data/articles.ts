@@ -1,9 +1,9 @@
 export const allArticles = [
   {
     slug: 'why-i-started-learning-typescript',
-    title: 'Why I started learning TypeScript (Even though I was fine with JavaScript)',
+    title: 'Why I started learning TypeScript ',
     image: '/images/ts.png',
-    excerpt: 'This article discusses my journey of learning TypeScript and how it has improved my development process.',
+    excerpt: 'This article discusses my journey of learning TypeScript and how it improved my development process.',
     link: "https://dherrbie.hashnode.dev/why-i-started-learning-typescript-even-though-i-was-fine-with-javascript"
   }, {
     slug: 'dhefi-release-notes',

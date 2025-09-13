@@ -2,6 +2,16 @@
 
 export const allProjects = [
   {
+    slug: 'Space tourism multi-page-website',
+    title: 'Space tourism multi-page website',
+    description: 'A multi-page website for a space tourism company, built with React.js and Tailwind CSS.',
+    image: '/images/space-travel.png',
+    stack: ['React.js', 'Tailwindcss', 'TypeScript' ],
+    liveLink: 'https://space-travel-tourism-three.vercel.app/',
+    githubLink: "https://github.com/fabusuyi-deborah/Space-travel-tourism",
+    bgColor : "bg-[#013600]"
+  },
+    {
     slug: 'todo-app',
     title: 'Todo app',
     description: 'A personal todo app built with React and Tailwind CSS. It also integrates API calls for task management.',
@@ -10,17 +20,6 @@ export const allProjects = [
     liveLink: 'https://todo-app-exam-six.vercel.app/',
     githubLink: 'https://github.com/your-username/todo-app',
     bgColor: "bg-[#191919]"
-  },
-
-  {
-    slug: 'portfolio',
-    title: 'Portfolio Website',
-    description: 'My personal portfolio website built with Next.js and Tailwind CSS.',
-    image: '/images/portfolio.png',
-    stack: ['Next.js', 'Tailwindcss', 'TypeScript', 'Framer-motion'],
-    liveLink: 'https://my-new-portfolio-five-plum.vercel.app/',
-    githubLink: "https://github.com/fabusuyi-deborah/my-new-portfolio",
-    bgColor : "bg-[#013600]"
   },
 
   {
