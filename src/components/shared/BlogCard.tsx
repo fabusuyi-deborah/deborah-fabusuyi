@@ -13,7 +13,7 @@ type Article = {
 }
 
 export default function BlogCard({ article }: { article: Article }) {
-  const [isExpanded, setIsExpanded] = useState(false)
+  const [isExpanded] = useState(false)
 
   return (
     <div className="blog-card h-full flex flex-col">
@@ -26,15 +26,6 @@ export default function BlogCard({ article }: { article: Article }) {
 
       <div className="flex-1 flex flex-col">
         <p className={`pt-1 text-md md:text-lg ${!isExpanded ? "line-clamp-3" : ""}`}>{article.excerpt}</p>
-
-        {article.excerpt.length > 150 && (
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="text-[#9747FF] text-sm mt-1 self-start hover:underline"
-          >
-            {isExpanded ? "Read less" : "Read more"}
-          </button>
-        )}
       </div>
 
       <div className="mt-2 flex items-center justify-between">
@@ -42,8 +33,9 @@ export default function BlogCard({ article }: { article: Article }) {
           href={article.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#9747FF] text-white rounded-full p-2 inline-flex items-center justify-center"
+          className="bg-[#473e26] text-white rounded-full px-4 py-2 inline-flex items-center gap-2 hover:bg-[#7b5b3d] transition"
         >
+          <span>{isExpanded ? "Read less" : "Read more"}</span>
           <ArrowUpRight className="w-5 h-5" />
         </a>
       </div>
