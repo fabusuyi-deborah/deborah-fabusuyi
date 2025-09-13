@@ -14,7 +14,7 @@ type ArticlesSectionProps = {
 
 export default function ArticlesSection({ articles }: ArticlesSectionProps) {
   return (
-    <section className="py-10 md:py-16 mt-20  max-w-7xl" id="articles">
+    <section className="py-10 md:py-16 mt-20  max-w-7xl overflow-auto" id="articles">
       <h1 className="text-lg md:text-5xl font-bold py-10 text-center ">
         <span className="block">PUBLICATIONS & ARTICLES</span>
       </h1>
