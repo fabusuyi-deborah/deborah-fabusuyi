@@ -14,11 +14,11 @@ export const allProjects = [
     {
     slug: 'todo-app',
     title: 'Todo app',
-    description: 'A personal todo app built with React and Tailwind CSS. It also integrates API calls for task management.',
+    description: 'A personal todo app built with Next.js and Tailwind CSS. It also integrates API calls for task management.',
     image: '/images/todo.png',
-    stack: ['React', 'Tailwindcss'],
-    liveLink: 'https://todo-app-exam-six.vercel.app/',
-    githubLink: 'https://github.com/your-username/todo-app',
+    stack: ['Nextjs', 'Tailwindcss'],
+    liveLink: 'https://todo-app-nextjs-kohl.vercel.app/',
+    githubLink: 'https://github.com/fabusuyi-deborah/Todo-app-Nextjs',
     bgColor: "bg-[#191919]"
   },
 
