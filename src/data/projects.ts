@@ -13,7 +13,7 @@ export const allProjects = [
   },
     {
     slug: 'todo-app',
-    title: 'Todo app',
+    title: 'Task Buddy',
     description: 'A personal todo app built with Next.js and Tailwind CSS. It also integrates API calls for task management.',
     image: '/images/todo.png',
     stack: ['Nextjs', 'Tailwindcss'],
@@ -22,14 +22,25 @@ export const allProjects = [
     bgColor: "bg-[#191919]"
   },
 
+  // {
+  //   slug: 'E-commerce',
+  //   title: 'E-commerce',
+  //   description: 'A simple e-commerce website built with React and Tailwind CSS.',
+  //   image: '/images/e-commerce.png',
+  //   stack: ['React', 'Tailwindcss'],
+  //   liveLink: 'https://e-commerce-app-three-teal.vercel.app/',
+  //   githubLink: 'https://github.com/fabusuyi-deborah/e-commerce-app',
+  //   bgColor: "bg-[#004851]"
+  // },
+
   {
-    slug: 'Dee-events',
-    title: 'Dee Events',
-    description: 'A simple online event management platform.',
-    image: '/images/testWebsite.png',
-    stack: ['React', 'Tailwindcss'],
-    liveLink: '',
-    githubLink: 'https://github.com/yourname/e-commerce',
+    slug: 'Product-details-page',
+    title: 'Product-details-page (ongoing)',
+    description: 'This is an e-commerce product detail page being built with Nextjs, Typescript, and Tailwind CSS.',
+    image: '/images/product-details-page.png',
+    stack: ['Nextjs', 'Tailwindcss', 'Typescript', 'Rest-api'],
+    liveLink: 'https://product-details-page-vfdl-4cr6.vercel.app/',
+    githubLink: 'https://github.com/fabusuyi-deborah/Product-details-page-VFDL',
     bgColor: "bg-[#02084E]"
   },
 
