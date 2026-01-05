@@ -1,6 +1,16 @@
 // src/data/projects.ts
 
 export const allProjects = [
+     {
+    slug: 'Favvylee-bakes-and-event',
+    title: 'Favvylee bakes and event',
+    description: "A multi-page website for a baking and event planning business, built with Next.js and Tailwind CSS.",
+    image: '/images/favvylee.png',
+    stack: ['Next.js', 'Typescript', 'Tailwindcss'],
+    liveLink: 'https://favvylee-bakes-and-events.vercel.app/',
+    githubLink: 'https://github.com/fabusuyi-deborah/Favvylee-bakes-and-events',
+    bgColor: "bg-[#8b1e3f]"
+  },
   {
     slug: 'Space tourism multi-page-website',
     title: 'Space tourism multi-page website',
@@ -52,6 +62,6 @@ export const allProjects = [
     stack: ['React', 'Typescript', 'Tailwindcss'],
     liveLink: 'https://e-commerce-app-three-teal.vercel.app/',
     githubLink: 'https://github.com/fabusuyi-deborah/e-commerce-app',
-    bgColor: "bg-[#390000]"
-  }
+    bgColor: "bg-[#]"
+  },
 ];
