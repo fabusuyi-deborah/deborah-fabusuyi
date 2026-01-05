@@ -29,7 +29,7 @@ export const allProjects = [
     stack: ['Nextjs', 'Tailwindcss'],
     liveLink: 'https://todo-app-nextjs-kohl.vercel.app/',
     githubLink: 'https://github.com/fabusuyi-deborah/Todo-app-Nextjs',
-    bgColor: "bg-[#191919]"
+    bgColor: "bg-[#02084E]"
   },
 
   // {
@@ -51,7 +51,7 @@ export const allProjects = [
     stack: ['Nextjs', 'Tailwindcss', 'Typescript', 'Rest-api'],
     liveLink: 'https://product-details-page-vfdl-4cr6.vercel.app/',
     githubLink: 'https://github.com/fabusuyi-deborah/Product-details-page-VFDL',
-    bgColor: "bg-[#02084E]"
+    bgColor: "bg-[#390000]"
   },
 
   {
@@ -62,6 +62,6 @@ export const allProjects = [
     stack: ['React', 'Typescript', 'Tailwindcss'],
     liveLink: 'https://e-commerce-app-three-teal.vercel.app/',
     githubLink: 'https://github.com/fabusuyi-deborah/e-commerce-app',
-    bgColor: "bg-[#]"
+    bgColor: "bg-[#402266]"
   },
 ];
