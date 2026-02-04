@@ -187,7 +187,7 @@ export default function Hero() {
 
         {/* Buttons */}
         <div className="mt-10 flex flex-col md:flex-row justify-center items-center gap-4">
-          <a href="https://drive.google.com/drive/u/0/folders/11-czFy0bmfKY0YMzGrotop3Ml3JGx6vu"
+          <a href="/deborah-fabusuyi-resume.pdf"
             className="bg-[#9747FF] text-white px-8 py-3 rounded-full w-full md:w-48"
             target="_blank"
             rel="noopener noreferrer"
